@@ -15,6 +15,7 @@ import {
   getBudget,
   json,
   layout,
+  pingIndexNow,
   renderBody,
   wantsJson,
 } from '../lib/util.js';
@@ -52,6 +53,10 @@ export async function onRequestGet(context) {
       method: 'GET',
       maxLen: GET_BODY_MAX,
     });
+
+    if (result.isNewPage) {
+      pingIndexNow(context, `${url.origin}/wiki.cgi?${encodeURIComponent(page)}`);
+    }
 
     if (wantsJson(request, url)) {
       return json(result, {

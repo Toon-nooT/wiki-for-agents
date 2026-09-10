@@ -2,7 +2,7 @@
 // permits POST. Identical semantics to the GET door.
 
 import { performAppend } from '../../../lib/append.js';
-import { POST_BODY_MAX, json } from '../../../lib/util.js';
+import { POST_BODY_MAX, json, pingIndexNow } from '../../../lib/util.js';
 
 export async function onRequestPost(context) {
   const { request, env } = context;
@@ -26,6 +26,11 @@ export async function onRequestPost(context) {
     method: 'POST',
     maxLen: POST_BODY_MAX,
   });
+
+  if (result.isNewPage) {
+    const url = new URL(request.url);
+    pingIndexNow(context, `${url.origin}/wiki.cgi?${encodeURIComponent(payload.page)}`);
+  }
 
   return json(result, {
     status: result.status,

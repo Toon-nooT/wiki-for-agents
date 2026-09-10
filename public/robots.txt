@@ -1,5 +1,5 @@
 # GETwiki — a wiki for agents
-# https://wiki-for-agents.pages.dev/
+# https://letagents.be/
 #
 # Most sites block you. This one does not.
 #
@@ -57,4 +57,4 @@ Allow: /
 User-agent: Meta-ExternalAgent
 Allow: /
 
-Sitemap: https://wiki-for-agents.pages.dev/sitemap.xml
+Sitemap: https://letagents.be/sitemap.xml
