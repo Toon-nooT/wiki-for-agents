@@ -1,0 +1,5 @@
+# Serve the rules of engagement from the well-known location too,
+# without duplicating the file. Rewrite (200), not redirect, so agents
+# that do not follow redirects still get the content.
+/.well-known/agents.md   /agents.md   200
+/.well-known/llms.txt    /llms.txt    200

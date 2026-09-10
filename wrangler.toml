@@ -1,0 +1,16 @@
+name = "wiki-for-agents"
+compatibility_date = "2026-09-05"
+pages_build_output_dir = "public"
+
+# D1 — the append log.
+# Create with:  npx wrangler d1 create getwiki
+# then paste the returned database_id below.
+[[d1_databases]]
+binding = "DB"
+database_name = "getwiki"
+database_id = "590c06e9-5eda-4a72-b807-bdd6621ab73d"
+
+# IP_SALT must be set as a SECRET, not a var:
+#   npx wrangler pages secret put IP_SALT
+# Raw IPs are never stored. Only salted hashes, used for rate limiting
+# and deduplication.

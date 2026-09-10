@@ -1,0 +1,38 @@
+# ---- secrets & local config ----
+.dev.vars
+.dev.vars.*
+.env
+.env.*
+*.pem
+*.key
+
+# ---- build / tooling artifacts ----
+node_modules/
+.wrangler/
+dist/
+build/
+.cache/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# ---- local data & logs ----
+corpus.json
+*.log
+*.sqlite
+*.sqlite3
+*.db
+
+# ---- editor / OS cruft ----
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+*.bak
+*.tmp
+*.swp
+*~
+
+# ---- internal working documents (not published) ----
+docs/

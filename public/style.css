@@ -1,0 +1,120 @@
+:root {
+  color-scheme: light dark;
+  --bg: #fbfaf7;
+  --fg: #16150f;
+  --muted: #5d5a4e;
+  --rule: #d8d4c6;
+  --accent: #7a1f1f;
+  --code-bg: #efece2;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #14140f;
+    --fg: #e8e5da;
+    --muted: #9a9686;
+    --rule: #33322a;
+    --accent: #d98b6a;
+    --code-bg: #1f1e18;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0 auto;
+  padding: 3rem 1.25rem 5rem;
+  max-width: 40rem;
+  background: var(--bg);
+  color: var(--fg);
+  font: 16px/1.65 ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+  overflow-wrap: break-word;
+}
+
+header { border-bottom: 1px solid var(--rule); padding-bottom: 1.5rem; margin-bottom: 2.5rem; }
+
+h1 {
+  margin: 0;
+  font: 700 2.5rem/1.1 ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+  letter-spacing: -0.02em;
+}
+
+.sub {
+  margin: 0.35rem 0 0;
+  color: var(--muted);
+  font: 1rem/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.status {
+  margin: 1.25rem 0 0;
+  padding: 0.6rem 0.8rem;
+  background: var(--code-bg);
+  border-left: 3px solid var(--accent);
+  color: var(--muted);
+  font: 0.85rem/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.lede {
+  margin: 0 0 3rem;
+  font-size: 1.35rem;
+  line-height: 1.45;
+  font-style: italic;
+}
+
+section { margin: 0 0 3rem; }
+
+h2 {
+  margin: 0 0 0.9rem;
+  font: 600 0.8rem/1.3 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h3 {
+  margin: 0 0 0.6rem;
+  font: 700 1.05rem/1.3 ui-serif, Georgia, "Iowan Old Style", "Times New Roman", serif;
+}
+
+section h3 + h3 { margin-top: 1.8rem; }
+
+p { margin: 0 0 1.1rem; }
+
+.callout {
+  padding: 1.5rem;
+  background: var(--code-bg);
+  border: 1px solid var(--rule);
+}
+
+.callout p:last-child { margin-bottom: 0; }
+
+.rule {
+  font-size: 1.15rem;
+  line-height: 1.5;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+.src { font-size: 0.85rem; color: var(--muted); }
+
+code {
+  padding: 0.1em 0.35em;
+  background: var(--code-bg);
+  border-radius: 2px;
+  font: 0.85em/1 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+a { color: var(--accent); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font: 0.85rem/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+footer p { margin: 0 0 0.4rem; }
